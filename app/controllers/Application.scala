@@ -18,10 +18,19 @@ object Application extends Controller {
       "status" -> text
     )
   )
+  
 
+  /**
+   * index
+   */
   def index = Action {
-    Ok(views.html.index("Your new application is ready."))
-  }
+    
+    val lockedString = if (switchStatus) "LOCKED" else "UNLOCKED"
+    
+    Ok(views.html.index("The door is " + lockedString))
+        
+  } // end index
+  
   
   /**
    * getStatus
