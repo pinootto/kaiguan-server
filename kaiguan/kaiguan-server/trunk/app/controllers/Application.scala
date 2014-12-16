@@ -28,7 +28,7 @@ object Application extends Controller {
    */
   def getStatus = Action {
     
-    Ok(toJson(switchStatus))
+    Ok(toJson(Map("status" -> switchStatus)))
     
   } // end getStatus
   
