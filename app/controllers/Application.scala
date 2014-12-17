@@ -47,7 +47,7 @@ object Application extends Controller {
    */
   def setStatus = Action { implicit request =>
     
-    this.switchStatus = statusForm.bindFromRequest.get.toBoolean
+    switchStatus = statusForm.bindFromRequest.get.toBoolean
     
     Logger debug "switchStatus = " + switchStatus
     
